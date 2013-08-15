@@ -11,31 +11,41 @@ class FizzBuzz
   def play(range)
     str = ""
     range.each do |numb|
-      str += divisible_by_three(numb).to_s
-      str += divisible_by_five(numb).to_s
-      str += divisible_by_both(numb).to_s
+      if divisible_by_three(numb)
+        str += "fizz"
+      elsif divisible_by_five(numb)
+        str += "buzz"
+      elsif divisible_by_both(numb)
+        str += "fizzbuzz"
+      else
+        str += numb.to_s
+      end
     end
     str
   end
 
   def divisible_by_three(numb)
     if numb % 3 == 0 
-      "fizz"
+      true
     else
-      numb
+      false
     end
   end
 
   def divisible_by_five(numb)
     if numb % 5 == 0
-      "buzz"
+      true
     else
-      numb
+      false
     end
   end
 
   def divisible_by_both(value)
-    "fizzbuzz!" unless !divisible_by_three(value) && !divisible_by_five(value)
+    if divisible_by_three(value) && divisible_by_five(value)
+      true
+    else
+      false
+    end
   end
 
 
