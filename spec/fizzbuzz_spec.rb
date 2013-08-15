@@ -16,19 +16,19 @@ describe FizzBuzz do
   end
 
   it "has a method named divisible_by_three" do
-    expect(buzz.divisible_by_three(1)).to eq(1)
+    expect(buzz.divisible_by_three(1)).to eq(false)
   end
 
   it "divisible_by_three returns true" do
-    expect(buzz.divisible_by_three(3)).to eq("fizz")
+    expect(buzz.divisible_by_three(3)).to eq(true)
   end
 
   it "has a method named divisible_by_five" do
-    expect(buzz.divisible_by_five(5)).to eq("buzz")
+    expect(buzz.divisible_by_five(5)).to eq(true)
   end
 
   it "should be divisible by both 3 and 5" do
-    expect(buzz.divisible_by_both(15)).to eq("fizzbuzz!")
+    expect(buzz.divisible_by_both(15)).to eq(true)
   end
 
   it "returns results when calling run method" do
