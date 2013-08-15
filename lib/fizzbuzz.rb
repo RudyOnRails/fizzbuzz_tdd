@@ -25,29 +25,15 @@ class FizzBuzz
   end
 
   def divisible_by_three(numb)
-    if numb % 3 == 0 
-      true
-    else
-      false
-    end
+    numb % 3 == 0
   end
 
   def divisible_by_five(numb)
-    if numb % 5 == 0
-      true
-    else
-      false
-    end
+    numb % 5 == 0
   end
 
   def divisible_by_both(value)
-    if divisible_by_three(value) && divisible_by_five(value)
-      true
-    else
-      false
-    end
+    divisible_by_three(value) && divisible_by_five(value)
   end
-
-
 
 end
