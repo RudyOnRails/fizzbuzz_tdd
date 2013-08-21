@@ -32,11 +32,11 @@ describe FizzBuzz do
   end
 
   it "returns results when calling run method" do
-    expect(buzz.play(1..3)).to eq("12fizz")
+    expect(buzz.play(1..3)).to eq("1, 2, fizz")
   end
 
   it "returns results when calling run method" do
-    expect(buzz.play(1..5)).to eq("12fizz4buzz")
+    expect(buzz.play(1..5)).to eq("1, 2, fizz, 4, buzz")
   end
 
 end

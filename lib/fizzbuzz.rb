@@ -9,19 +9,19 @@ class FizzBuzz
   end
 
   def play(range)
-    str = ""
+    str = []
     range.each do |numb|
       if divisible_by_three(numb)
-        str += "fizz"
+        str << "fizz"
       elsif divisible_by_five(numb)
-        str += "buzz"
+        str << "buzz"
       elsif divisible_by_both(numb)
-        str += "fizzbuzz"
+        str << "fizzbuzz"
       else
-        str += numb.to_s
+        str << numb
       end
     end
-    str
+    str*", "
   end
 
   def divisible_by_three(numb)
@@ -36,4 +36,9 @@ class FizzBuzz
     divisible_by_three(value) && divisible_by_five(value)
   end
 
+end
+
+if __FILE__ == $0
+  buzz = FizzBuzz.new
+  puts buzz.play(1..5)
 end
